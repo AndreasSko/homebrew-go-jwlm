@@ -2,16 +2,16 @@
 class GoJwlm < Formula
   desc ""
   homepage "https://github.com/AndreasSko/go-jwlm"
-  version "0.3.1-beta"
+  version "0.3.2-beta"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/AndreasSko/go-jwlm/releases/download/0.3.1-beta/go-jwlm_0.3.1-beta_macOS_64bit.tar.gz"
-    sha256 "6c69719c3fc25c71c1d81f5df63ab0cb232f97fc021789b3f238975bdc2c258c"
+    url "https://github.com/AndreasSko/go-jwlm/releases/download/0.3.2-beta/go-jwlm_0.3.2-beta_macOS_64bit.tar.gz"
+    sha256 "e639e328af396e27da0f38ab490d241cf42464516920683006b14711d25cbb61"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/AndreasSko/go-jwlm/releases/download/0.3.1-beta/go-jwlm_0.3.1-beta_Linux_64bit.tar.gz"
-      sha256 "8596c26e15c63194308cdae4a216234ae91bc4c3001d3e33167a7b7a799687c7"
+      url "https://github.com/AndreasSko/go-jwlm/releases/download/0.3.2-beta/go-jwlm_0.3.2-beta_Linux_64bit.tar.gz"
+      sha256 "807d5499ef9d1f6f4d7326407134cf7bb15e202d202b64b2a50fb2166e0694f9"
     end
   end
 
