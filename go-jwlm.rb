@@ -5,12 +5,12 @@
 class GoJwlm < Formula
   desc ""
   homepage "https://github.com/AndreasSko/go-jwlm"
-  version "0.4.0-beta"
+  version "0.4.1-beta"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/AndreasSko/go-jwlm/releases/download/0.4.0-beta/go-jwlm_0.4.0-beta_macOS_64bit.tar.gz"
-      sha256 "f4213bd1b8a2a3dfc9bfa7cede0242bc058be773f296898eac181d164793d499"
+      url "https://github.com/AndreasSko/go-jwlm/releases/download/0.4.1-beta/go-jwlm_0.4.1-beta_macOS_64bit.tar.gz"
+      sha256 "e00a2696bc62ecac29a10cc40c7d3bf633949233061142ce2321030d0e32c71b"
 
       def install
         bin.install "go-jwlm"
@@ -20,8 +20,8 @@ class GoJwlm < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/AndreasSko/go-jwlm/releases/download/0.4.0-beta/go-jwlm_0.4.0-beta_Linux_64bit.tar.gz"
-      sha256 "5510bb312348e0985167c985022f639b395ebaf0cd3e874bed91cf249ff3b9a9"
+      url "https://github.com/AndreasSko/go-jwlm/releases/download/0.4.1-beta/go-jwlm_0.4.1-beta_Linux_64bit.tar.gz"
+      sha256 "759a2ba3d385d8b84d0bb4b70a69029519f9523fb51b79230bf7605377c79680"
 
       def install
         bin.install "go-jwlm"
