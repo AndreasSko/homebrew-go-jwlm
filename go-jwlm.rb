@@ -5,23 +5,31 @@
 class GoJwlm < Formula
   desc ""
   homepage "https://github.com/AndreasSko/go-jwlm"
-  version "0.4.1-beta"
+  version "0.5.2-beta"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/AndreasSko/go-jwlm/releases/download/0.4.1-beta/go-jwlm_0.4.1-beta_macOS_64bit.tar.gz"
-      sha256 "e00a2696bc62ecac29a10cc40c7d3bf633949233061142ce2321030d0e32c71b"
+    url "https://github.com/AndreasSko/go-jwlm/releases/download/0.5.2-beta/go-jwlm_0.5.2-beta_darwin_amd64.tar.gz"
+    sha256 "367d093bb11590457ed3c49952842737fa7f0ace08210a2d6a76f9ea332907d4"
 
-      def install
-        bin.install "go-jwlm"
+    def install
+      bin.install "go-jwlm"
+    end
+
+    if Hardware::CPU.arm?
+      def caveats
+        <<~EOS
+          The darwin_arm64 architecture is not supported for the GoJwlm
+          formula at this time. The darwin_amd64 binary may work in compatibility
+          mode, but it might not be fully supported.
+        EOS
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/AndreasSko/go-jwlm/releases/download/0.4.1-beta/go-jwlm_0.4.1-beta_Linux_64bit.tar.gz"
-      sha256 "759a2ba3d385d8b84d0bb4b70a69029519f9523fb51b79230bf7605377c79680"
+      url "https://github.com/AndreasSko/go-jwlm/releases/download/0.5.2-beta/go-jwlm_0.5.2-beta_linux_amd64.tar.gz"
+      sha256 "56bcc89adf58b1e53c8eadcd362159aa9057cc39ec00068bf7af052e1af31880"
 
       def install
         bin.install "go-jwlm"
